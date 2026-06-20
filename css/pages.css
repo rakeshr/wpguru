@@ -273,6 +273,58 @@
     pointer-events: none;
 }
 
+/* About Home Section */
+.about-home-section {
+    background: var(--color-bg-dark);
+    position: relative;
+}
+
+.about-home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.3), transparent);
+}
+
+.about-home-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-12);
+    align-items: center;
+}
+
+.about-home-avatar {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-full);
+    border: 3px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+.about-home-content h2 {
+    margin-bottom: var(--space-6);
+}
+
+.about-home-content p {
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+    line-height: var(--leading-relaxed);
+}
+
+.about-home-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+}
+
 /* ============================================
    Plans Page
    ============================================ */
@@ -728,6 +780,16 @@
     box-shadow: 0 0 40px rgba(0, 212, 255, 0.2);
 }
 
+.about-avatar-img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto var(--space-6);
+    object-fit: cover;
+    border-radius: var(--radius-full);
+    border: 3px solid rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 40px rgba(0, 212, 255, 0.15);
+}
+
 .about-values {
     background: var(--color-bg-section);
 }
@@ -1017,7 +1079,8 @@
    ============================================ */
 @media (max-width: 1024px) {
     .rudra-highlight,
-    .about-content {
+    .about-content,
+    .about-home-grid {
         grid-template-columns: 1fr;
     }
 
